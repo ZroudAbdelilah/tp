@@ -1,32 +1,29 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+  <div id="app" class="container">
+  
+    <GetTodo></GetTodo>
+    <CurrentTodos></CurrentTodos>
+    <CompletedTodos></CompletedTodos>
   </div>
 </template>
 
+<script>
+import GetTodo from './components/GetTodo.vue'
+import CurrentTodos from './components/CurrentTodos.vue'
+import CompletedTodos from './components/CompletedTodos.vue'
+export default {
+  components: {
+    GetTodo,
+    CurrentTodos,
+    CompletedTodos
+  }
+ 
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+body {
+  background-color: rgb(245, 245, 245) !important;
+  font-family: Helvetica, sans-serif;
 }
 </style>
